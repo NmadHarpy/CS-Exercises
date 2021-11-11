@@ -13,6 +13,11 @@ namespace ProblemaProduto
             return Preco * Quantidade;
         }
 
+        public void AdicionarProdutos(int quantidade)
+        {
+            Quantidade += quantidade;
+        }
+
         public override string ToString()
         {
             return Nome + ", $ " 
@@ -20,6 +25,10 @@ namespace ProblemaProduto
                 + ", " 
                 + Quantidade + " unidades, Total: $ " 
                 + valorTotalEstoque().ToString("F2", CultureInfo.InvariantCulture);
+        }
+        public void RemoverProdutos(int quantidade)
+        {
+            Quantidade -= quantidade;
         }
     }
 }
