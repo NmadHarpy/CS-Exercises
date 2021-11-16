@@ -1,0 +1,1 @@
+﻿Just a few exercises to practice my C# skills 🧙‍♂️
