@@ -8,18 +8,19 @@ namespace ProblemaProduto
     {
         static void Main(string[] args)
         {
-            Produto p = new Produto();
 
             Console.WriteLine("Entre os dados do produto: ");
 
-            Console.WriteLine("Nome: ");
-            p.Nome = Console.ReadLine();
+            Console.Write("Nome: ");
+            string nome = Console.ReadLine();
 
             Console.Write("Preço: ");
-            p.Preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            double preco = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             Console.Write("Quantidade no estoque: \n");
-            p.Quantidade = int.Parse(Console.ReadLine());
+            int quantidade = int.Parse(Console.ReadLine());
+
+            Produto p = new Produto(nome, preco, quantidade);
 
             Console.WriteLine($"Dados do produto: {p}\n");
 
